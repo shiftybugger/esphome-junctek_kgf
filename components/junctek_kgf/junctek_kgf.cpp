@@ -15,6 +15,7 @@ int getval(const char*& cursor)
   const char* pos = cursor;
   char* end = nullptr;
   const long val = strtoll(pos, &end, 10);
+  ESP_LOGE("JunkTekKGF", "end= %s", cursor);
   if (end == pos || end == nullptr)
   {
     ESP_LOGE("JunkTekKGF", "Error invalid number %s", cursor);
